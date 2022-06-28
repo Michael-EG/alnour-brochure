@@ -601,7 +601,7 @@ a {
 .article1-main-div {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 9fr;
+  /* grid-template-rows: 1fr 9fr; */
   grid-template-areas: 'titleArea' 'bodyAdrea';
   /* padding-left: 5vw; */
   /* margin-right: 5vw; */
@@ -614,12 +614,16 @@ a {
   display: flex;
   flex: 1;
   justify-content: center;
+  grid-area: titleArea;
   /* background-color: #f4f4f4; */
   background: linear-gradient(180deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%);
   /* background: linear-gradient(180deg, rgba(0,3,14,1) 0%, rgba(181,190,247,1) 5%, rgba(150,163,254,1) 9%, rgba(244,244,244,1) 58%, rgba(254,254,254,1) 90%, rgba(255,255,255,1) 100%); */
   align-items: center;
   padding-right: 5vw;
   padding-left: 5vw;
+  /* margin-top: 2vh; */
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .article1-article-title-text-inner {
@@ -649,9 +653,11 @@ a {
 }
 
 .article1-article-body-div {
+  margin-top: 1vh;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 5vh;
+  grid-area: bodyAdrea;
 }
 
 .article1-article-paragraph-heading{
@@ -702,6 +708,55 @@ a {
   /* border-bottom-width: 20px !important; */
 }
 
+/* ------------------------ Article2 -------------------- */
+
+.article2-main-box {
+/* background-color: antiquewhite !important; */
+  display: flex !important;
+  flex: 1;
+  justify-content: center !important;
+  width: 100% !important;
+  height: fit-content !important;
+}
+
+.article2-main-paper {
+  width: 100% !important;
+  max-width: 100vw !important;
+  height: fit-content !important;
+  margin-top: min(max(150px, 10vh), 25px);
+}
+
+.article2-main-div {
+  display: grid;
+  /* min-width: 98vw; */
+  /* width: 100% !important; */
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 9fr;
+  grid-template-areas: 'titleArea' 'bodyAdrea';
+}
+
+.article2-article-title-div {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  grid-area: titleArea;
+  /* background-color: #f4f4f4; */
+  /* background: linear-gradient(180deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%); */
+  /* background: linear-gradient(180deg, rgba(0,3,14,1) 0%, rgba(181,190,247,1) 5%, rgba(150,163,254,1) 9%, rgba(244,244,244,1) 58%, rgba(254,254,254,1) 90%, rgba(255,255,255,1) 100%); */
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+.article2-article-title-text {
+  position: absolute;
+  text-align: center !important;
+  font-size: min(max(20px, 2vw), 35px) !important;
+  font-weight: 800 !important;
+  color: #404040;
+}
+
 /* ------------------------ Analysis And Advice Page En -------------------- */
 
 .analysis-and-advice-main-div {
@@ -712,3 +767,13 @@ a {
   /* align-items: center; */
   /* background-color: yellow; */
 }
+
+/* ------------------------ Office Solutions Page En -------------------- */
+
+/* .office-solutions-main-div { */
+  /* background-color: red; */
+  /* margin-left: -5vw; */
+  /* margin-right: -1.8vw; */
+  /* width: 100vw; */
+  /* margin-right: -1vw; */
+/* } */

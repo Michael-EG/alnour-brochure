@@ -1,4 +1,7 @@
-const { analysisAdviceRoute } = require('../../src/routes');
+const {
+  analysisAdviceRoute,
+  officeSolutionsRoute,
+} = require('../../src/routes');
 
 const printAndCopyTextEN = 'Print & Copy';
 const printAndCopyTextAR = 'الطباعة و الطباعة التصويرية';
@@ -9,7 +12,7 @@ const printAndCopyMenu1Link = analysisAdviceRoute;
 const printAndCopyMenu1Key = 'infra_analysis';
 const printAndCopyMenu2EN = 'Office Solutions';
 const printAndCopyMenu2AR = 'مستلزمات المكتب طابعات';
-const printAndCopyMenu2Link = analysisAdviceRoute;
+const printAndCopyMenu2Link = officeSolutionsRoute;
 const printAndCopyMenu2Key = 'office_solutions';
 const printAndCopyMenu3EN = 'Production Pressure';
 const printAndCopyMenu3AR = 'طابعات الأنتاج العالي';

@@ -97,7 +97,7 @@ export default function Layout({ children, title, description }) {
         <Divider />
         <Navbar />
 
-        <Container className={classes.main}>{children}</Container>
+        <div className={classes.main}>{children}</div>
         <footer className={classes.footer}>
           <Footer />
           {/* <Typography>All Rights Reserved.</Typography> */}
