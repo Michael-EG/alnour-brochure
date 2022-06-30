@@ -16,6 +16,7 @@ const useStyles = makeStyles({
   },
   main: {
     minHeight: '80vh',
+    // maxWidth: '1024px'
     // backgroundColor: 'red',
   },
   footer: {

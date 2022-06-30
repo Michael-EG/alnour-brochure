@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // Article has ==> title, paragraphs, image
 // paragraph has ==> heading, boolean indicating if the paragraph is abullet list or not, paragraph text
-export default function Article2_EN({
+export default function Article3_EN({
   articleTitle,
   articleImage,
   articleImageAltText,
@@ -60,8 +60,8 @@ export default function Article2_EN({
           <div
             className={
               articleImage
-                ? largeView ? 'article2-article-body-div-with-image' : 'article2-article-body-div-with-image-mobile'
-                : largeView ? 'article2-article-body-div-without-image' : 'article2-article-body-div-without-image-mobile'
+                ? largeView ? 'article3-article-body-div-with-image' : 'article3-article-body-div-with-image-mobile'
+                : largeView ? 'article3-article-body-div-without-image' : 'article3-article-body-div-without-image-mobile'
             }
           >
             {articleImage && articleImageAltText && (
@@ -80,7 +80,7 @@ export default function Article2_EN({
                 if (paragraph.isBullet) {
                   // return a bullet list
                   return (
-                    <div key={uuidv4()} className="article2-article-paragraph-div">
+                    <div key={uuidv4()} className={largeView ? "article3-article-paragraph-div" : "article3-article-paragraph-div-mobile"}>
                       <Typography className="article2-article-bullet-list-heading" style={{ color: bulletListHeadingColor || '#476282' }} >
                         {paragraph.listTitle}
                       </Typography>
@@ -98,7 +98,7 @@ export default function Article2_EN({
                   return (
                     <div
                       key={uuidv4()}
-                      className="article2-article-paragraph-div"
+                      className={largeView ? "article3-article-paragraph-div" : "article3-article-paragraph-div-mobile"}
                     >
                       {paragraph.heading && (
                         <Typography className="article2-article-paragraph-heading-text" style={{ color: paragraphHeadingColor || '#476282' }}>

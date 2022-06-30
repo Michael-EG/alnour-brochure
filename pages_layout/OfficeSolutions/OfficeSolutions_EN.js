@@ -1,29 +1,32 @@
 import React from 'react';
 import Article2_EN from '../../components/Article2/Article2_EN';
+import Article3_EN from '../../components/Article3/Article3_EN';
+import { paper_1_color, dark_grey, light_beige, light_blue, medium_blue, medium_purple, very_light_red } from '../../public/colors'
 
 export default function OfficeSolutions_EN() {
   const articleTitle_1 = 'Infrastructure Analysis';
+  const articleImageURL = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/images%2Fpp-ta-p-4030d-a-img-data.jpeg?alt=media&token=05ec7010-266b-4b05-b8e9-a14be15e188b';
   //   const articleSecondaryTitle_2 =
   //     'This is a bold text to be another title? shold be interesting';
   const articleParagraphs_1 = [
     {
       heading: 'Why IT infrastructure is important?',
       text: 'Technology powers nearly every aspect of today’s businesses, from an individual employee’s work to operations to goods and services. When properly networked, technology can be optimized to improve communication, create efficiencies and increase productivity.',
-      imgURL: null,
+      // imgURL: null,
     },
     {
       heading: null,
       text: 'If an IT infrastructure is flexible, reliable and secure, it can help an enterprise meet its goals and provide a competitive edge in the market. Alternatively, if an IT infrastructure isn’t properly implemented, businesses can face connectivity, productivity and security issues—like system disruptions and breaches. Overall, having a properly implemented infrastructure can be a factor in whether a business is profitable or not.',
-      imgURL: null,
+      // imgURL: null,
     },
     {
       heading: 'Why do I need to look at my print infrastructure?',
       text: 'The office printer isn’t just the device in the corner any more. While copying and faxing have become less common, document scanning and sharing are now vital components in keeping business moving. As such, the printer needs to be integrated into the wider network of devices and platforms that people use, and this can sometimes be overlooked.',
-      imgURL: null,
+      // imgURL: null,
     },
     {
       heading: 'Looking to improve print infrastructure for your company?',
-      imgURL: null,
+      // imgURL: null,
       text: `We analyze the office infrastructure used (printers, copiers, scanners, multifunction devices) and the connected software for you. This is the most important prerequisite for a comprehensive and sustainable optimization of your print and document management. We record your system landscape on site and develop a suggestion for improvement that is specially tailored to your company.`,
       isBullet: true,
       listTitle: 'This is a bullet list title:',
@@ -55,12 +58,39 @@ export default function OfficeSolutions_EN() {
     <div className="analysis-and-advice-main-div">
       <Article2_EN
         articleTitle={articleTitle_1}
+        articleImage={articleImageURL}
+        articleImageAltText="triumph adler printer"
         // articleSecondaryTitle={articleSecondaryTitle_2}
         articleParagraphs={articleParagraphs_1}
+        paperColor={paper_1_color}
+      // bodyTextColor={very_light_red}
+      // bulletItemsColor={medium_blue}
+      // titleColor={dark_grey}
+      // titleColor={light_beige}
+      />
+
+
+      <Article3_EN
+        articleTitle={articleTitle_1}
+        articleImage={articleImageURL}
+        articleImageAltText="triumph adler printer"
+        // articleSecondaryTitle={articleSecondaryTitle_2}
+        articleParagraphs={articleParagraphs_1}
+        paperColor={paper_1_color}
+      // bodyTextColor={very_light_red}
+      // bulletItemsColor={medium_blue}
+      // titleColor={dark_grey}
+      // titleColor={light_beige}
+      />
+      <Article3_EN
+        articleTitle={articleTitle_2}
+        articleParagraphs={articleParagraphs_2}
+      // paperColor={light_beige}
       />
       <Article2_EN
         articleTitle={articleTitle_2}
         articleParagraphs={articleParagraphs_2}
+      // paperColor={light_beige}
       />
       <div
         style={{

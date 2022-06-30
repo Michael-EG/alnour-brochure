@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // Article has ==> title, paragraphs, image
 // paragraph has ==> heading, boolean indicating if the paragraph is abullet list or not, paragraph text
-export default function Article2_EN({
+export default function Article2_AR({
   articleTitle,
   articleImage,
   articleImageAltText,
@@ -50,9 +50,9 @@ export default function Article2_EN({
         className="article2-main-paper"
       >
         <div className={largeView ? "article2-main-div" : "article2-main-div-mobile"}>
-          <div className={largeView ? "article2-article-title-div" : "article2-article-title-div-mobile"}>
+          <div className={largeView ? "article2-article-title-div-ar" : "article2-article-title-div-mobile-ar"}>
             {articleTitle && (
-              <Typography className={largeView ? "article2-article-title-text" : "article2-article-title-text-mobile"} style={{ color: titleColor || '#404040' }}>
+              <Typography className={largeView ? "article2-article-title-text-ar" : "article2-article-title-text-mobile-ar"} style={{ color: titleColor || '#404040' }}>
                 {articleTitle}
               </Typography>
             )}
@@ -80,13 +80,13 @@ export default function Article2_EN({
                 if (paragraph.isBullet) {
                   // return a bullet list
                   return (
-                    <div key={uuidv4()} className="article2-article-paragraph-div">
-                      <Typography className="article2-article-bullet-list-heading" style={{ color: bulletListHeadingColor || '#476282' }} >
+                    <div key={uuidv4()} className="article2-article-paragraph-div-ar">
+                      <Typography className="article2-article-bullet-list-heading-ar" style={{ color: bulletListHeadingColor || '#476282' }} >
                         {paragraph.listTitle}
                       </Typography>
-                      <ul style={{ color: bulletItemsColor || bodyTextColor || '#000000' }}>
+                      <ul style={{ color: bulletItemsColor || bodyTextColor || '#000000', textAlign: 'right', direction: 'rtl' }}>
                         {paragraph.listItems.map((listItem) => (
-                          <li key={uuidv4()}><Typography className="article2-article-body-text" style={{ color: bulletItemsColor || bodyTextColor || '#000000' }}>{listItem}</Typography></li>
+                          <li key={uuidv4()} style={{ direction: 'rtl' }}><Typography className="article2-article-body-text-ar" style={{ color: bulletItemsColor || bodyTextColor || '#000000' }}>{listItem}</Typography></li>
                         ))}
                       </ul>
                       {index !== articleParagraphs.length - 1 && (
@@ -98,15 +98,15 @@ export default function Article2_EN({
                   return (
                     <div
                       key={uuidv4()}
-                      className="article2-article-paragraph-div"
+                      className="article2-article-paragraph-div-ar"
                     >
                       {paragraph.heading && (
-                        <Typography className="article2-article-paragraph-heading-text" style={{ color: paragraphHeadingColor || '#476282' }}>
+                        <Typography className="article2-article-paragraph-heading-text-ar" style={{ color: paragraphHeadingColor || '#476282' }}>
                           {paragraph.heading}
                         </Typography>
                       )}
                       {paragraph.heading && <br />}
-                      <Typography className="article2-article-body-text" style={{ color: bodyTextColor || '#000000' }}>
+                      <Typography className="article2-article-body-text-ar" style={{ color: bodyTextColor || '#000000' }}>
                         {paragraph.text}
                       </Typography>
                       {

@@ -96,7 +96,7 @@ export default function Layout({ children, title, description }) {
         <AnouncementBar />
         <Divider />
         <Navbar />
-
+        {/* <div className={}></div> */}
         <div className={classes.main}>{children}</div>
         <footer className={classes.footer}>
           <Footer />
