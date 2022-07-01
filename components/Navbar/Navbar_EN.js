@@ -140,7 +140,7 @@ export default function Navbar_EN() {
               <Link>
                 <Typography
                   className={classes.brand}
-                  // style={{ background: 'blue' }}
+                // style={{ background: 'blue' }}
                 >
                   AL-Nour
                 </Typography>{' '}
@@ -214,16 +214,16 @@ export default function Navbar_EN() {
                     text: printAndCopyMenu2EN,
                     url: printAndCopyMenu2Link,
                   },
-                  {
-                    key: printAndCopyMenu3Key,
-                    text: printAndCopyMenu3EN,
-                    url: printAndCopyMenu3Link,
-                  },
-                  {
-                    key: printAndCopyMenu4Key,
-                    text: printAndCopyMenu4EN,
-                    url: printAndCopyMenu4Link,
-                  },
+                  // {
+                  //   key: printAndCopyMenu3Key,
+                  //   text: printAndCopyMenu3EN,
+                  //   url: printAndCopyMenu3Link,
+                  // },
+                  // {
+                  //   key: printAndCopyMenu4Key,
+                  //   text: printAndCopyMenu4EN,
+                  //   url: printAndCopyMenu4Link,
+                  // },
                   {
                     key: printAndCopyMenu5Key,
                     text: printAndCopyMenu5EN,
@@ -296,6 +296,7 @@ export default function Navbar_EN() {
                   {
                     key: servicesMenu1Key,
                     text: servicesMenu1EN,
+                    // url: printAndCopyMenu1Link,
                   },
                   {
                     key: servicesMenu2Key,

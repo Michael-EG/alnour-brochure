@@ -6,27 +6,21 @@ import { paper_1_color, dark_grey, light_beige, light_blue, medium_blue, medium_
 export default function OfficeSolutions_AR() {
   const articleTitle_1 = 'تحليل البنية التحتية';
   const articleImageURL = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/images%2Fpp-ta-p-4030d-a-img-data.jpeg?alt=media&token=05ec7010-266b-4b05-b8e9-a14be15e188b';
-  //   const articleSecondaryTitle_2 =
-  //     'This is a bold text to be another title? shold be interesting';
   const articleParagraphs_1 = [
     {
       heading: 'لماذا البنية التحتية لتكنولوجيا المعلومات مهمة؟',
       text: 'تدعم التكنولوجيا كل جانب من جوانب أعمال اليوم تقريبًا ، من عمل الموظف الفردي إلى العمليات إلى السلع والخدمات. عند الاتصال بالشبكة بشكل صحيح ، يمكن تحسين التكنولوجيا لتحسين الاتصال وخلق الكفاءات وزيادة الإنتاجية',
-      // imgURL: null,
     },
     {
       heading: null,
       text: 'إذا كانت البنية التحتية لتكنولوجيا المعلومات مرنة وموثوقة وآمنة ، فيمكنها مساعدة المؤسسة على تحقيق أهدافها وتوفير ميزة تنافسية في السوق. بدلاً من ذلك ، إذا لم يتم تنفيذ البنية التحتية لتكنولوجيا المعلومات بشكل صحيح ، فقد تواجه الشركات مشكلات الاتصال والإنتاجية والأمان - مثل اضطرابات النظام والاختراقات. بشكل عام ، يمكن أن يكون وجود بنية تحتية مطبقة بشكل صحيح عاملاً في تحديد ما إذا كانت الأعمال التجارية مربحة أم لا',
-      // imgURL: null,
     },
     {
       heading: 'لماذا أحتاج إلى إلقاء نظرة على البنية التحتية للطباعة الخاصة بي؟',
       text: 'لم تعد طابعة المكتب مجرد الجهاز في الزاوية بعد الآن. بينما أصبح النسخ والإرسال عبر الفاكس أقل شيوعًا ، أصبح مسح المستندات ضوئيًا ومشاركتها مكونين حيويين في استمرار حركة الأعمال. على هذا النحو ، يجب دمج الطابعة في الشبكة الأوسع للأجهزة والأنظمة الأساسية التي يستخدمها الأشخاص ، ويمكن أحيانًا التغاضي عن ذلك',
-      // imgURL: null,
     },
     {
       heading: 'هل تتطلع إلى تحسين البنية التحتية للطباعة لشركتك؟',
-      // imgURL: null,
       text: `نقوم بتحليل البنية التحتية للمكتب المستخدمة (الطابعات وآلات النسخ والماسحات الضوئية والأجهزة متعددة الوظائف) والبرامج المتصلة من أجلك. هذا هو أهم شرط مسبق لتحسين شامل ومستدام لإدارة الطباعة والوثائق الخاصة بك. نسجل مشهد النظام الخاص بك في الموقع ونضع اقتراحًا للتحسين مصممًا خصيصًا لشركتك`,
       isBullet: true,
       listTitle: ':هذا عنوان قائمة نقطية',
@@ -47,57 +41,87 @@ export default function OfficeSolutions_AR() {
       imgURL: null,
       text: 'Having discrete, disconnected printers from a number of suppliers increases costs, security issues and business efficiency. Often, businesses don’t appreciate how many printers they’re running and the effect of this. In the first instance, a print fleet audit establishes what equipment you have and where. It’s the first step in putting together an integrated print infrastructure that can be proactively managed. This enables you to make tangible process improvements that increase accountability and control.',
     },
-
-    // {
-    //   heading: null,
-    //   text: 'If an IT infrastructure is flexible, reliable and secure, it can help an enterprise meet its goals and provide a competitive edge in the market. Alternatively, if an IT infrastructure isn’t properly implemented, businesses can face connectivity, productivity and security issues—like system disruptions and breaches. Overall, having a properly implemented infrastructure can be a factor in whether a business is profitable or not.',
-    //   imgURL: null,
-    // },
   ];
+  const officeSolutionsTitle = "حلول مكتبية";
+  const officeSolutoinsParagraphs = [
+    {
+      // heading: 'Looking to improve print infrastructure for your company?',
+      // text: `We analyze the office infrastructure used (printers, copiers, scanners, multifunction devices) and the connected software for you. This is the most important prerequisite for a comprehensive and sustainable optimization of your print and document management. We record your system landscape on site and develop a suggestion for improvement that is specially tailored to your company.`,
+      isBullet: true,
+      listTitle: 'نقدم مجموعة واسعة من المنتجات والخدمات لتناسب جميع سير عمل شركتك',
+      listItems: ['أنظمة المكاتب', 'في محادثة شخصية ، سنكتشف معًا الطابعة الأفضل بالنسبة لك والتي تلبي جميع متطلباتك', 'مزيج من أنظمة الطباعة والبرمجيات'],
+    },
+  ];
+  const officePrinterTitle = "طابعات مكتبية";
+  // const officePrintersParagraphs = ["Office printers adapt to very different requirements. Use this printer for a small office to an open plan office or even production environments.", "Hallmarks of office printers are their high speed, high print quality and low running costs.", "We will be happy to advise you and together we will find the ideal office printer that meets your wishes and requirements.", "We also accompany you from the consultation to the installation and setup of the printer. Of course, you will receive precise and understandable training from us so that you can use the full potential of the printer."];
+  const officePrintersParagraphs2 = [
+    {
+      // heading: 'Looking to improve print infrastructure for your company?',
+      // text: `We analyze the office infrastructure used (printers, copiers, scanners, multifunction devices) and the connected software for you. This is the most important prerequisite for a comprehensive and sustainable optimization of your print and document management. We record your system landscape on site and develop a suggestion for improvement that is specially tailored to your company.`,
+      isBullet: true,
+      // listTitle: 'We provide wide range of products and services to fit all your company\'s workflow',
+      listItems: ['طابعات مكتبية تتكيف مع متطلبات مختلفة للغاية. استخدم هذه الطابعة لمكتب صغير لمكتب مخطط مفتوح أو حتى بيئات إنتاج',
+        'تتمثل السمات المميزة للطابعات المكتبية في السرعة العالية وجودة الطباعة العالية وتكاليف التشغيل المنخفضة.',
+        'سنكون سعداء لمساعدتك وسنجد معًا الطابعة المكتبية المثالية التي تلبي متطلباتك',
+        'نرافقك أيضًا من الاستشارة إلى تثبيت الطابعة وإعدادها. بالطبع ، سوف تتلقى تدريبًا دقيقًا ومفهومًا منا حتى تتمكن من استخدام الإمكانات الكاملة للطابعة'],
+    },
+  ];
+  const multiFunctionTitle = "نظام متعدد الوظائف";
+  const multiFunctionParagraph = [
+    {
+      // heading: 'نظام متعدد الوظائف (نسخ ، طباعة ، مسح ضوئي)',
+      // heading: 'Looking to improve print infrastructure for your company?',
+      // text: `Enjoy the benefits of a multifunction system. Whether as a single device or network printer, nothing is left to be desired. They are fast, productive and above all user-friendly. In addition, they deliver high-quality printing in cost-effective color printing. We will be happy to advise you and together we will find the ideal multifunction printer that meets your wishes and requirements.`,
+      isBullet: true,
+      listTitle: 'نظام متعدد الوظائف (نسخ ، طباعة ، مسح ضوئي)',
+      listItems: ['سريع ومنتج وسهل الاستخدام', 'يعمل كجهاز واحد أو طابعة شبكة', 'سنكون سعداء لمساعدتك وسنجد معًا الطابعة المكتبية المثالية التي تلبي متطلباتك', 'طباعة عالية الجودة وفعالة من حيث التكلفة'],
+    },
+  ]
+
   return (
     <div className="analysis-and-advice-main-div">
       <Article2_AR
+        articleTitle={officeSolutionsTitle}
+        articleParagraphs={officeSolutoinsParagraphs}
+      />
+      <Article2_AR
+        articleTitle={officePrinterTitle}
+        articleImage={articleImageURL}
+        articleImageAltText="triumph adler printer"
+        articleParagraphs={officePrintersParagraphs2}
+      />
+      <Article3_AR articleTitle={multiFunctionTitle} articleImage={articleImageURL} articleImageAltText="triumph adler printer" articleParagraphs={multiFunctionParagraph}></Article3_AR>
+
+      {/* <Article2_AR
         articleTitle={articleTitle_1}
         articleImage={articleImageURL}
         articleImageAltText="triumph adler printer"
-        // articleSecondaryTitle={articleSecondaryTitle_2}
         articleParagraphs={articleParagraphs_1}
         paperColor={paper_1_color}
-      // bodyTextColor={very_light_red}
-      // bulletItemsColor={medium_blue}
-      // titleColor={dark_grey}
-      // titleColor={light_beige}
       />
       <Article3_AR
         articleTitle={articleTitle_1}
         articleImage={articleImageURL}
         articleImageAltText="triumph adler printer"
-        // articleSecondaryTitle={articleSecondaryTitle_2}
         articleParagraphs={articleParagraphs_1}
         paperColor={paper_1_color}
-      // bodyTextColor={very_light_red}
-      // bulletItemsColor={medium_blue}
-      // titleColor={dark_grey}
-      // titleColor={light_beige}
       />
       <Article3_AR
         articleTitle={articleTitle_1}
         articleParagraphs={articleParagraphs_1}
-      // paperColor={light_beige}
       />
       <Article2_AR
         articleTitle={articleTitle_1}
         articleParagraphs={articleParagraphs_1}
-      // paperColor={light_beige}
-      />
-      <div
+      /> */}
+      {/* <div
         style={{
           width: '100%',
           height: '7vh',
           minHeight: '20px',
           backgroundColor: 'transparent',
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

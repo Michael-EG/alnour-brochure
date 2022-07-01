@@ -36,6 +36,15 @@ import {
   printAndCopyMenu7AR,
   printAndCopyMenu7Key,
   printAndCopyTextAR,
+  printAndCopyMenu1Link,
+  printAndCopyMenu2Link,
+  printAndCopyMenu3Link,
+  printAndCopyMenu4Link,
+  printAndCopyMenu5Link,
+  printAndCopyMenu6Link,
+  printAndCopyMenu7Link,
+  // printAndCopyMenu8Link,
+  // printAndCopyMenu9Link,
   servicesMenu1AR,
   servicesMenu1Key,
   servicesMenu2AR,
@@ -143,38 +152,47 @@ export default function Navbar_AR() {
                   {
                     key: servicesMenu1Key,
                     text: servicesMenu1AR,
+                    url: printAndCopyMenu1Link,
                   },
                   {
                     key: servicesMenu2Key,
                     text: servicesMenu2AR,
+                    url: printAndCopyMenu2Link,
                   },
                   {
                     key: servicesMenu3Key,
                     text: servicesMenu3AR,
+                    url: printAndCopyMenu3Link,
                   },
                   {
                     key: servicesMenu4Key,
                     text: servicesMenu4AR,
+                    url: printAndCopyMenu4Link,
                   },
                   {
                     key: servicesMenu5Key,
                     text: servicesMenu5AR,
+                    url: printAndCopyMenu5Link,
                   },
                   {
                     key: servicesMenu6Key,
                     text: servicesMenu6AR,
+                    url: printAndCopyMenu6Link,
                   },
                   {
                     key: servicesMenu7Key,
                     text: servicesMenu7AR,
+                    url: printAndCopyMenu7Link,
                   },
                   {
                     key: servicesMenu8Key,
                     text: servicesMenu8AR,
+                    url: printAndCopyMenu7Link,
                   },
                   {
                     key: servicesMenu9Key,
                     text: servicesMenu9AR,
+                    url: printAndCopyMenu7Link,
                   },
                 ]}
               />
@@ -211,14 +229,17 @@ export default function Navbar_AR() {
                   {
                     key: softwareSolutionsMenu1Key,
                     text: softwareSolutionsMenu1AR,
+                    url: printAndCopyMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu2Key,
                     text: softwareSolutionsMenu2AR,
+                    url: printAndCopyMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu3Key,
                     text: softwareSolutionsMenu3AR,
+                    url: printAndCopyMenu1Link,
                   },
                 ]}
               />
@@ -230,13 +251,13 @@ export default function Navbar_AR() {
                 buttonText={printAndCopyTextAR}
                 popperPlacement="bottom-end"
                 menuItems={[
-                  { key: printAndCopyMenu1Key, text: printAndCopyMenu1AR },
-                  { key: printAndCopyMenu2Key, text: printAndCopyMenu2AR },
-                  { key: printAndCopyMenu3Key, text: printAndCopyMenu3AR },
-                  { key: printAndCopyMenu4Key, text: printAndCopyMenu4AR },
-                  { key: printAndCopyMenu5Key, text: printAndCopyMenu5AR },
-                  { key: printAndCopyMenu6Key, text: printAndCopyMenu6AR },
-                  { key: printAndCopyMenu7Key, text: printAndCopyMenu7AR },
+                  { key: printAndCopyMenu1Key, text: printAndCopyMenu1AR, url: printAndCopyMenu1Link, },
+                  { key: printAndCopyMenu2Key, text: printAndCopyMenu2AR, url: printAndCopyMenu2Link, },
+                  // { key: printAndCopyMenu3Key, text: printAndCopyMenu3AR, url: printAndCopyMenu3Link, },
+                  // { key: printAndCopyMenu4Key, text: printAndCopyMenu4AR, url: printAndCopyMenu4Link, },
+                  { key: printAndCopyMenu5Key, text: printAndCopyMenu5AR, url: printAndCopyMenu5Link, },
+                  { key: printAndCopyMenu6Key, text: printAndCopyMenu6AR, url: printAndCopyMenu6Link, },
+                  { key: printAndCopyMenu7Key, text: printAndCopyMenu7AR, url: printAndCopyMenu7Link, },
                 ]}
               />
             </div>
@@ -313,7 +334,7 @@ export default function Navbar_AR() {
               <Link>
                 <Typography
                   className={classes.brand}
-                  // style={{ background: 'blue' }}
+                // style={{ background: 'blue' }}
                 >
                   مؤسسة النور
                 </Typography>{' '}

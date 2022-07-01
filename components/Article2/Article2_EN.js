@@ -66,7 +66,7 @@ export default function Article2_EN({
           >
             {articleImage && articleImageAltText && (
               <div className={largeView ? "article2-article-image-div" : "article2-article-image-div-mobile"}>
-                <Image src={articleImage} alt={articleImageAltText} className={largeView ? 'article2-article-image' : 'article2-article-image-mobile'} layout={largeView ? "responsive" : "fixed"} height={largeView ? '25vw' : 200} width={largeView ? '25vw' : 200} />
+                <Image src={articleImage} alt={articleImageAltText} className={largeView ? 'article2-article-image' : 'article2-article-image-mobile'} layout={largeView ? "responsive" : "responsive"} height={largeView ? '25vw' : 200} width={largeView ? '25vw' : 200} />
               </div>
             )}
             <div

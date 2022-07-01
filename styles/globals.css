@@ -1109,6 +1109,111 @@ a {
   /* background-color: blue; */
 }
 
+/* ------------------------ Grid Links -------------------- */
+.grid-links-section-main-div {
+  display: flexbox;
+  flex: 1;
+  width: 100%;
+  /* background-color: yellow; */
+  /* padding-top: 3vh; */
+}
+
+.gird-links-section-title-div{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.grid-links-section-title-text {
+  font-size: min(max(13px, 2vw), 30px) !important;
+  font-weight: 800 !important;
+  /* font-family: 'Fira Sans Condensed'; */
+}
+
+.grid-links-main-grid {
+  width: 100vw !important;
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+}
+
+.grid-links-child-grid {
+  width: 100% !important;
+}
+.grid-links-child-grid-ar {
+  width: 100% !important;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.grid-links-child-grid-paper {
+  display: flexbox;
+  flex: 1;
+  height: 100%;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 1rem;
+}
+.grid-links-child-grid-paper-ar {
+  display: flexbox;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  padding: 1rem;
+}
+
+.grid-links-list-title-div {
+  display: flex;
+  flex: 1;
+  width: 100% !important;
+  /* background-color: #FFD700; */
+}
+.grid-links-list-title-div-ar {
+  display: flex;
+  flex: 1;
+  width: 100% !important;
+  /* background-color: #FFD700; */
+  justify-content: flex-end !important;
+}
+.grid-links-list-title-div-no-items {
+  display: flex;
+  flex: 1;
+  width: 100% !important;
+  height: 100% !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-links-list-title-text-ar {
+  text-align: right !important;
+  /* background-color: #FFD700; */
+}
+
+.grid-links-list-title-text-no-items{
+  text-align: center;
+}
+
+.grid-links-list-items-div {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.grid-links-list-component-ar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  direction: rtl;
+  justify-content: flex-end;
+}
+
 /* ------------------------ Analysis And Advice Page En -------------------- */
 
 .analysis-and-advice-main-div {

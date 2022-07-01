@@ -13,6 +13,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import useStyles from '../../utils/styles';
+import NextLink from 'next/link';
 
 export default function PopupMenu_AR({
   menuItems,
@@ -48,8 +49,8 @@ export default function PopupMenu_AR({
   return (
     <div
       onMouseLeave={handleClose}
-      //   onMouseOut={handleClose}
-      //   style={{ background: 'red' }}
+    //   onMouseOut={handleClose}
+    //   style={{ background: 'red' }}
     >
       <Stack direction="row" spacing={2}>
         <Link
@@ -87,7 +88,7 @@ export default function PopupMenu_AR({
               <Paper className="light-background">
                 <ClickAwayListener
                   onClickAway={handleClose}
-                  // onMouseLeave={handleClose}
+                // onMouseLeave={handleClose}
                 >
                   <MenuList
                     autoFocusItem={open}
@@ -103,9 +104,13 @@ export default function PopupMenu_AR({
                           className="navbar-pop-up-menu-item-ar"
                         >
                           {/* <Link> */}
-                          <Typography className="small-text">
-                            {menuItem.text}
-                          </Typography>
+                          <NextLink href={menuItem.url || '/'} passHref>
+                            <Link>
+                              <Typography className="small-text">
+                                {menuItem.text}
+                              </Typography>
+                            </Link>
+                          </NextLink>
                           {/* </Link> */}
                         </MenuItem>
                         {index === menuItems.length - 1 ? null : <Divider />}

@@ -3,6 +3,8 @@ import { Box, Paper, Typography } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
 import { Divider } from '@material-ui/core';
 import Article1 from '../components/Article1/Article1';
+import Article2_EN from '../components/Article2/Article2_EN';
+import Article3_EN from '../components/Article3/Article3_EN';
 
 export default function AnalysisAdvice_EN() {
   const articleTitle_1 = 'Infrastructure Analysis';
@@ -51,25 +53,56 @@ export default function AnalysisAdvice_EN() {
     //   imgURL: null,
     // },
   ];
+  const analysisArticleTitle = 'Analysis & Advice';
+  //   const articleSecondaryTitle_2 =
+  //     'This is a bold text to be another title? shold be interesting';
+  const analysisArticleParagraphs = [
+    {
+      heading: 'Do you want to improve something in your company in the long term?',
+      text: 'First we need to know the initial situation. We analyze the office infrastructure used (printers, copiers, scanners, multifunction devices) and the connected software for you. This is the most important prerequisite for a comprehensive and sustainable optimization of your print and document management. We record your system landscape on site and develop a suggestion for improvement that is specially tailored to your company.',
+      imgURL: null,
+    },
+  ];
+  const analysisBulletParagraph = [
+    {
+      heading: 'Looking to improve print infrastructure for your company?',
+      // imgURL: null,
+      text: `We analyze the office infrastructure used (printers, copiers, scanners, multifunction devices) and the connected software for you. This is the most important prerequisite for a comprehensive and sustainable optimization of your print and document management. We record your system landscape on site and develop a suggestion for improvement that is specially tailored to your company.`,
+      isBullet: true,
+      listTitle: 'This is a bullet list title:',
+      listItems: ['Items 1', 'Items2'],
+    },
+  ]
+
   return (
     <div className="analysis-and-advice-main-div">
       <Article1
-        articleTitle={articleTitle_1}
+        articleTitle={analysisArticleTitle}
         // articleSecondaryTitle={articleSecondaryTitle_2}
-        articleParagraphs={articleParagraphs_1}
+        articleParagraphs={analysisArticleParagraphs}
       />
-      <Article1
+      {/* <Article3_EN
+        articleTitle={analysisArticleTitle}
+        articleParagraphs={analysisBulletParagraph}
+      // paperColor={light_beige}
+      /> */}
+      {/* <Article2_EN
+        articleTitle={analysisArticleTitle}
+        articleParagraphs={analysisBulletParagraph}
+      // paperColor={light_beige}
+      /> */}
+      {/* <Article1
         articleTitle={articleTitle_2}
         articleParagraphs={articleParagraphs_2}
-      />
-      <div
+      /> */}
+      {/* <div
         style={{
           width: '100%',
           height: '7vh',
           minHeight: '20px',
           backgroundColor: 'transparent',
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }
