@@ -2,7 +2,7 @@ const {
   analysisAdviceRoute,
   officeSolutionsRoute,
   softwareSolutionsRoute,
-  technicalSupportRoute, infoPrintCopyRoute
+  technicalSupportRoute, infoPrintCopyRoute, documentManagementRoute, fleetManagementRoute, assetManagementRoute
 } = require('../../src/routes');
 
 const printAndCopyTextEN = 'Print & Copy';
@@ -42,12 +42,15 @@ const softwareSolutionsTextAR = 'برامج الأدارة';
 const softwareSolutionsMenu1EN = 'Document management';
 const softwareSolutionsMenu1AR = 'برامج أدارة الطابعات والمستخدمين';
 const softwareSolutionsMenu1Key = 'document_management';
+const softwareSolutionsMenu1Link = documentManagementRoute;
 const softwareSolutionsMenu2EN = 'Fleet management';
 const softwareSolutionsMenu2AR = 'برامج أدارة الأجهزة';
 const softwareSolutionsMenu2Key = 'fleet_management';
+const softwareSolutionsMenu2Link = fleetManagementRoute;
 const softwareSolutionsMenu3EN = 'Asset tracking & management';
 const softwareSolutionsMenu3AR = 'برامج أدارة الأصول و متابعة الأستهلاك';
 const softwareSolutionsMenu3Key = 'asset_management';
+const softwareSolutionsMenu3Link = assetManagementRoute;
 
 const officeEquipmentTextEN = 'Office equipment';
 const officeEquipmentTextAR = 'مستلزمات المكاتب من الأثاث';
@@ -127,12 +130,15 @@ module.exports = {
   softwareSolutionsMenu1EN,
   softwareSolutionsMenu1AR,
   softwareSolutionsMenu1Key,
+  softwareSolutionsMenu1Link,
   softwareSolutionsMenu2EN,
   softwareSolutionsMenu2AR,
   softwareSolutionsMenu2Key,
+  softwareSolutionsMenu2Link,
   softwareSolutionsMenu3EN,
   softwareSolutionsMenu3AR,
   softwareSolutionsMenu3Key,
+  softwareSolutionsMenu3Link,
 
   officeEquipmentTextEN,
   officeEquipmentTextAR,

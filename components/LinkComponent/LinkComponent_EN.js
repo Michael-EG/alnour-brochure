@@ -17,7 +17,7 @@ export default function LinkComponent_EN(
     descriptionColor,
     cardColor,
   }) {
-  // const imageURL = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/images%2Fpp-ta-p-4030d-a-img-data.jpeg?alt=media&token=05ec7010-266b-4b05-b8e9-a14be15e188b';
+  const defaultURL = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/images%2Fpp-ta-p-4030d-a-img-data.jpeg?alt=media&token=05ec7010-266b-4b05-b8e9-a14be15e188b';
   // const imageAltText = 'discriptive image';
   const [largeView, setLargeView] = useState(false);
   const [windowSize, setWindowSize] = useState({
@@ -40,7 +40,7 @@ export default function LinkComponent_EN(
         height: window.innerHeight,
       });
     }
-    console.log(windowSize);
+    // console.log(windowSize);
   };
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -50,13 +50,39 @@ export default function LinkComponent_EN(
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const getImageWidget = () => {
+    if (imageURL === null || imageURL === undefined || imageAltText === null || imageAltText === undefined) {
+      // console.log('no image');
+      return (<div></div>);
+    }
+    // console.log('image is here');
+    return (
+      // <div></div>
+      <div className='link-component-card-content-image-area_2'>
+        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+      </div>
+    );
+  };
+  const getImageWidgetSmall = () => {
+    if (imageURL === null || imageURL === undefined || imageAltText === null || imageAltText === undefined) {
+      return (<div></div>);
+    }
+    return (
+      <div className='link-component-card-content-image-area'>
+        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+      </div>
+    );
+  };
+
   if (largeView) {
     return (
       <div className='link-component-main-div' style={{ background: sectionBackgroundColor }}>
         <div className='link-component-card-content-main-div_2' >
-          <div className='link-component-card-content-image-area_2'>
-            <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
-          </div>
+          {/* {imageURL && (
+            
+          )} */}
+          {getImageWidget()}
+
           <div className='link-component-card-content-text-area_2'>
             <div className='link-component-title-div'>
               <Typography style={{ color: titleColor }} gutterBottom variant="h5" component="div">
@@ -81,9 +107,7 @@ export default function LinkComponent_EN(
         <Card sx={{ maxWidth: 400, width: '70%' }} style={{ background: cardColor }}>
           <CardContent>
             <div className='link-component-card-content-main-div' >
-              <div className='link-component-card-content-image-area'>
-                <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
-              </div>
+              {getImageWidgetSmall()}
               <div className='link-component-card-content-text-area'>
                 <div className='link-component-title-div'>
                   <Typography style={{ color: titleColor, }} gutterBottom variant="h5" component="div">

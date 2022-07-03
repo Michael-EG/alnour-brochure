@@ -71,6 +71,9 @@ import {
   softwareSolutionsMenu3AR,
   softwareSolutionsMenu3Key,
   softwareSolutionsTextAR,
+  softwareSolutionsMenu1Link,
+  softwareSolutionsMenu2Link,
+  softwareSolutionsMenu3Link,
 } from './Navbar_text';
 import NavigationDrawer_AR from '../NavigationDrawer/NavigationDrawer_AR';
 
@@ -229,17 +232,17 @@ export default function Navbar_AR() {
                   {
                     key: softwareSolutionsMenu1Key,
                     text: softwareSolutionsMenu1AR,
-                    url: printAndCopyMenu1Link,
+                    url: softwareSolutionsMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu2Key,
                     text: softwareSolutionsMenu2AR,
-                    url: printAndCopyMenu1Link,
+                    url: softwareSolutionsMenu2Link,
                   },
                   {
                     key: softwareSolutionsMenu3Key,
                     text: softwareSolutionsMenu3AR,
-                    url: printAndCopyMenu1Link,
+                    url: softwareSolutionsMenu3Link,
                   },
                 ]}
               />

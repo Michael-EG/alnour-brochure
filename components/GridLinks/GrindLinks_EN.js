@@ -14,7 +14,7 @@ export default function GridLinks_EN({ gridTitle, gridComponents, gridItemBackgr
         {gridComponents.map((item, index) => {
           return (
             <Grid item xs={12} md={4} key={uuidv4()} className='grid-links-child-grid' >
-              <Paper className='grid-links-child-grid-paper' style={{ background: hoverIndex === index ? gridItemBackgroundHover : gridItemBackground }} onMouseLeave={() => { setHoverIndex(-1); }} onMouseEnter={() => { setHoverIndex(index); }}>
+              <Paper className='grid-links-child-grid-paper' style={{ background: hoverIndex === index ? gridItemBackgroundHover : gridItemBackground }} onMouseLeave={() => { setHoverIndex(-1); }} onMouseEnter={() => { setHoverIndex(index); }} onMouseOver={() => { setHoverIndex(index); }} onPointerLeave={() => { setHoverIndex(-1); }} onPointerEnter={() => { setHoverIndex(index); }}>
                 {/* <p>{item.listTitle}</p> */}
                 <div className={item.listIems ? 'grid-links-list-title-div' : 'grid-links-list-title-div-no-items'}>
                   <Typography className={item.listIems ? 'grid-links-list-title-text' : 'grid-links-list-title-text-no-items'} style={{ color: hoverIndex === index ? gridTextColorHover : gridTextColor }}>{item.listTitle}</Typography>

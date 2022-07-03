@@ -70,7 +70,7 @@ import {
   printAndCopyMenu6Link,
   printAndCopyMenu5Link,
   printAndCopyMenu4Link,
-  printAndCopyMenu3Link,
+  printAndCopyMenu3Link, softwareSolutionsMenu1Link, softwareSolutionsMenu2Link, softwareSolutionsMenu3Link
 } from './Navbar_text';
 import PopupMenu_EN from '../PopupMenu/PopupMenu_EN';
 import NavigationDrawer_EN from '../NavigationDrawer/NavigationDrawer_EN';
@@ -253,14 +253,17 @@ export default function Navbar_EN() {
                   {
                     key: softwareSolutionsMenu1Key,
                     text: softwareSolutionsMenu1EN,
+                    url: softwareSolutionsMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu2Key,
                     text: softwareSolutionsMenu2EN,
+                    url: softwareSolutionsMenu2Link,
                   },
                   {
                     key: softwareSolutionsMenu3Key,
                     text: softwareSolutionsMenu3EN,
+                    url: softwareSolutionsMenu3Link,
                   },
                 ]}
               />

@@ -50,6 +50,29 @@ export default function LinkComponent_AR(
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const getImageWidget = () => {
+    if (imageURL === null || imageURL === undefined || imageAltText === null || imageAltText === undefined) {
+      // console.log('no image');
+      return (<div></div>);
+    }
+    // console.log('image is here');
+    return (
+      <div className='link-component-card-content-image-area_2'>
+        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+      </div>
+    );
+  };
+  const getImageWidgetSmall = () => {
+    if (imageURL === null || imageURL === undefined || imageAltText === null || imageAltText === undefined) {
+      return (<div></div>);
+    }
+    return (
+      <div className='link-component-card-content-image-area'>
+        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+      </div>
+    );
+  };
+
   if (largeView) {
     return (
       <div className='link-component-main-div' style={{ background: sectionBackgroundColor }}>
@@ -69,9 +92,7 @@ export default function LinkComponent_AR(
               </Typography>
             </div>
           </div>
-          <div className='link-component-card-content-image-area_2'>
-            <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
-          </div>
+          {getImageWidget()}
         </div>
       </div>
     )
@@ -81,9 +102,7 @@ export default function LinkComponent_AR(
         <Card sx={{ maxWidth: 400, width: '70%' }} style={{ background: cardColor }}>
           <CardContent>
             <div className='link-component-card-content-main-div' >
-              <div className='link-component-card-content-image-area'>
-                <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
-              </div>
+              {getImageWidgetSmall()}
               <div className='link-component-card-content-text-area'>
                 <div className='link-component-title-div-ar'>
                   <Typography style={{ color: titleColor, textAlign: 'right', backgroundColor: 'red' }} gutterBottom variant="h5" component="div">
