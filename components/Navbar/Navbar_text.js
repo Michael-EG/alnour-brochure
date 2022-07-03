@@ -1,7 +1,8 @@
 const {
   analysisAdviceRoute,
   officeSolutionsRoute,
-  softwareSolutionsRoute
+  softwareSolutionsRoute,
+  technicalSupportRoute, infoPrintCopyRoute
 } = require('../../src/routes');
 
 const printAndCopyTextEN = 'Print & Copy';
@@ -29,11 +30,11 @@ const printAndCopyMenu5AR = 'برامج ادارة الطباعة';
 const printAndCopyMenu5Key = 'software_solutions';
 const printAndCopyMenu6EN = 'Technology and Support';
 const printAndCopyMenu6AR = 'الدعم الفني';
-const printAndCopyMenu6Link = analysisAdviceRoute;
+const printAndCopyMenu6Link = technicalSupportRoute;
 const printAndCopyMenu6Key = 'tech_support';
 const printAndCopyMenu7EN = 'Useful Information';
 const printAndCopyMenu7AR = 'معلومات تهمك';
-const printAndCopyMenu7Link = analysisAdviceRoute;
+const printAndCopyMenu7Link = infoPrintCopyRoute;
 const printAndCopyMenu7Key = 'useful_information';
 
 const softwareSolutionsTextEN = 'Software solutions';

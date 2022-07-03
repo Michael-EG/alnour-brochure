@@ -8,6 +8,7 @@ const paper_1_color = '#E7D2CC'; // scallop
 const grey_1 = '#576F72';
 const grey_2 = '#3F4E4F';
 const grey_3 = '#656565';
+const grey_4 = '#848484';
 const purple_1 = '#1B2430';
 const white_1 = '#f4f4f4';
 

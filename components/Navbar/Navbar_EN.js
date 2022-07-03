@@ -118,6 +118,7 @@ export default function Navbar_EN() {
   });
   useEffect(() => {
     handleResize();
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
     <AppBar position="static" className={classes.navbar}>

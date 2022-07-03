@@ -16,6 +16,12 @@ const useStyles = makeStyles({
   },
   main: {
     minHeight: '80vh',
+    display: 'flex',
+    flex: '1',
+    justifyContent: 'center',
+    // alignItems: 'center',
+    width: '100vw',
+    // background: 'red'
     // maxWidth: '1024px'
     // backgroundColor: 'red',
   },
