@@ -131,16 +131,17 @@ export default function Home_AR() {
   const linkDescription3 = '.إدارة الوثائق ، إدارة الأجهزة ، إدارة الأصول والتتبع';
   const linkButtonText3 = 'عرض الصفحة'
   const handleResize = () => {
+    console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
-    }
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.innerWidth !== windowSize.width) {
       // Handler to call on window resize
       // function handleResize() {
       // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
@@ -148,18 +149,25 @@ export default function Home_AR() {
     }
     // console.log(windowSize);
   };
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  //   // return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   useEffect(() => {
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    // console.log('hi', window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className='home-page-main-div'>
       <div className='home-page-main-image-div'>
-        <Image src={mainImageURL} alt={mainImageAltText} layout="fixed" height={0.45 * windowSize.width || 100} width={0.87 * windowSize.width || 100} />
+        <Image src={mainImageURL} alt={mainImageAltText} layout='intrinsic' height={0.45 * windowSize.width || 100} width={0.87 * windowSize.width || 100} />
       </div>
       <div style={{ width: '100%', marginTop: '12vh', marginBottom: '0', marginLeft: '10%', marginRight: '10%' }}>
         <Divider />

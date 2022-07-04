@@ -106,12 +106,23 @@ export default function Navbar_AR() {
     }
   }
   const handleResize = () => {
+    // console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      // function handleResize() {
+      // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
+      // setWindowSize({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     }
+    // console.log(windowSize);
   };
   const toggleDrawer = (open) => (event) => {
     if (
@@ -125,11 +136,19 @@ export default function Navbar_AR() {
     setDrawerState(!drawerState);
   };
   // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  // }, []);
   useEffect(() => {
     handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
   return (
     <AppBar position="static" className={classes.navbar}>

@@ -26,20 +26,39 @@ export default function Article3_EN({
 }) {
   const [largeView, setLargeView] = useState(false);
   const handleResize = () => {
+    // console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      // function handleResize() {
+      // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
+      // setWindowSize({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     }
+    // console.log(windowSize);
   };
 
   // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  // }, []);
   useEffect(() => {
     handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
   return (
     <Box className="article2-main-box" flex={1}>
@@ -66,7 +85,7 @@ export default function Article3_EN({
           >
             {articleImage && articleImageAltText && (
               <div className={largeView ? "article2-article-image-div" : "article2-article-image-div-mobile"}>
-                <Image src={articleImage} alt={articleImageAltText} className={largeView ? 'article2-article-image' : 'article2-article-image-mobile'} layout={largeView ? "responsive" : "fixed"} height={largeView ? '25vw' : 200} width={largeView ? '25vw' : 200} />
+                <Image src={articleImage} alt={articleImageAltText} className={largeView ? 'article2-article-image' : 'article2-article-image-mobile'} layout={largeView ? "responsive" : "responsive"} height={largeView ? '25vw' : 200} width={largeView ? '25vw' : 200} />
               </div>
             )}
             <div

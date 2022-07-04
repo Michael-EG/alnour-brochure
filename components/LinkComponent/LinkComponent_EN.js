@@ -42,12 +42,20 @@ export default function LinkComponent_EN(
     }
     // console.log(windowSize);
   };
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  //   // return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   useEffect(() => {
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
   }, []);
 
   const getImageWidget = () => {
@@ -59,7 +67,7 @@ export default function LinkComponent_EN(
     return (
       // <div></div>
       <div className='link-component-card-content-image-area_2'>
-        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+        <Image src={imageURL} alt={imageAltText} layout="responsive" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
       </div>
     );
   };
@@ -69,7 +77,7 @@ export default function LinkComponent_EN(
     }
     return (
       <div className='link-component-card-content-image-area'>
-        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+        <Image src={imageURL} alt={imageAltText} layout="responsive" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
       </div>
     );
   };

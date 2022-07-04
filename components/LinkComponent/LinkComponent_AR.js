@@ -42,12 +42,20 @@ export default function LinkComponent_AR(
     }
     console.log(windowSize);
   };
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  //   // return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   useEffect(() => {
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
   }, []);
 
   const getImageWidget = () => {
@@ -58,7 +66,7 @@ export default function LinkComponent_AR(
     // console.log('image is here');
     return (
       <div className='link-component-card-content-image-area_2'>
-        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+        <Image src={imageURL} alt={imageAltText} layout="responsive" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
       </div>
     );
   };
@@ -68,7 +76,7 @@ export default function LinkComponent_AR(
     }
     return (
       <div className='link-component-card-content-image-area'>
-        <Image src={imageURL} alt={imageAltText} layout="fixed" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
+        <Image src={imageURL} alt={imageAltText} layout="responsive" height={0.2 * windowSize.width || 100} width={0.2 * windowSize.width || 100} />
       </div>
     );
   };
@@ -105,11 +113,11 @@ export default function LinkComponent_AR(
               {getImageWidgetSmall()}
               <div className='link-component-card-content-text-area'>
                 <div className='link-component-title-div-ar'>
-                  <Typography style={{ color: titleColor, textAlign: 'right', backgroundColor: 'red' }} gutterBottom variant="h5" component="div">
+                  <Typography style={{ color: titleColor, textAlign: 'right' }} gutterBottom variant="h5" component="div">
                     {title}
                   </Typography>
                 </div>
-                <div className='link-component-description-div'>
+                <div className='link-component-description-div-ar'>
                   <Typography style={{ color: descriptionColor, textAlign: 'right' }} variant="body2" color="text.secondary">
                     {description}
                   </Typography>
