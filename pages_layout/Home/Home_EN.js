@@ -8,6 +8,7 @@ import LinkComponent_EN from '../../components/LinkComponent/LinkComponent_EN';
 
 export default function Home_EN() {
   const mainImageURL = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/alnour_images%2Foffice1.jpeg?alt=media&token=60f6278c-a86c-40fa-9781-7c21a84da808';
+  const mainImageURL2 = 'https://firebasestorage.googleapis.com/v0/b/alnourtracker.appspot.com/o/alnour_images%2Foffice2.jpg?alt=media&token=cf518763-f194-4c14-a662-03d637887733';
   const mainImageAltText = 'home office interior image';
   const [largeView, setLargeView] = useState(false);
   const [windowSize, setWindowSize] = useState({
@@ -165,7 +166,7 @@ export default function Home_EN() {
   return (
     <div className='home-page-main-div'>
       <div className='home-page-main-image-div'>
-        <Image src={mainImageURL} alt={mainImageAltText} layout="intrinsic" height={0.45 * windowSize.width || 100} width={0.87 * windowSize.width || 100} />
+        <Image src={mainImageURL2} alt={mainImageAltText} layout="intrinsic" height={0.45 * windowSize.width || 100} width={0.87 * windowSize.width || 100} />
       </div>
       <div style={{ width: '100%', marginTop: '12vh', marginBottom: '0', marginLeft: '10%', marginRight: '10%' }}>
         <Divider />
