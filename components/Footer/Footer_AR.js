@@ -29,20 +29,39 @@ export default function Footer_AR() {
   const current = new Date();
   const [largeView, setLargeView] = useState(false);
   const handleResize = () => {
+    // console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      // function handleResize() {
+      // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
+      // setWindowSize({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     }
+    // console.log(windowSize);
   };
 
   // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  // }, []);
   useEffect(() => {
     handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
 
   return (

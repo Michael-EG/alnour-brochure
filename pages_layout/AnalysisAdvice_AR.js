@@ -52,9 +52,19 @@ export default function AnalysisAdvice_AR() {
     //   imgURL: null,
     // },
   ];
+  const analysisArticleTitle = 'تحليل البنية التحتية';
+  //   const articleSecondaryTitle_2 =
+  //     'This is a bold text to be another title? shold be interesting';
+  const analysisArticleParagraphs = [
+    {
+      heading: 'هل ترغب في تحسين شيء ما في شركتك على المدى الطويل؟',
+      text: 'نحتاج أولاً إلى تسجيل الوضع الأولي. نقوم بتحليل البنية التحتية للمكتب المستخدمة (الطابعات وآلات النسخ والماسحات الضوئية والأجهزة متعددة الوظائف) والبرامج المتصلة من أجلك. هذا هو أهم شرط مسبق لتحسين شامل ومستدام لإدارة الطباعة والوثائق الخاصة بك. نسجل مشهد النظام الخاص بك في الموقع ونضع اقتراحًا للتحسين مصممًا خصيصًا لشركتك',
+      imgURL: null,
+    },
+  ];
   return (
     <div className="analysis-and-advice-main-div">
-      <Article1_AR
+      {/* <Article1_AR
         articleTitle={articleTitle_1}
         // articleSecondaryTitle={articleSecondaryTitle_2}
         articleParagraphs={articleParagraphs_1}
@@ -70,7 +80,12 @@ export default function AnalysisAdvice_AR() {
           minHeight: '20px',
           backgroundColor: 'transparent',
         }}
-      ></div>
+      ></div> */}
+      <Article1_AR
+        articleTitle={analysisArticleTitle}
+        // articleSecondaryTitle={articleSecondaryTitle_2}
+        articleParagraphs={analysisArticleParagraphs}
+      />
     </div>
   );
 }

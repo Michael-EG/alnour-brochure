@@ -36,6 +36,15 @@ import {
   printAndCopyMenu7AR,
   printAndCopyMenu7Key,
   printAndCopyTextAR,
+  printAndCopyMenu1Link,
+  printAndCopyMenu2Link,
+  printAndCopyMenu3Link,
+  printAndCopyMenu4Link,
+  printAndCopyMenu5Link,
+  printAndCopyMenu6Link,
+  printAndCopyMenu7Link,
+  // printAndCopyMenu8Link,
+  // printAndCopyMenu9Link,
   servicesMenu1AR,
   servicesMenu1Key,
   servicesMenu2AR,
@@ -62,6 +71,9 @@ import {
   softwareSolutionsMenu3AR,
   softwareSolutionsMenu3Key,
   softwareSolutionsTextAR,
+  softwareSolutionsMenu1Link,
+  softwareSolutionsMenu2Link,
+  softwareSolutionsMenu3Link,
 } from './Navbar_text';
 import NavigationDrawer_AR from '../NavigationDrawer/NavigationDrawer_AR';
 
@@ -94,12 +106,23 @@ export default function Navbar_AR() {
     }
   }
   const handleResize = () => {
+    // console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      // function handleResize() {
+      // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
+      // setWindowSize({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     }
+    // console.log(windowSize);
   };
   const toggleDrawer = (open) => (event) => {
     if (
@@ -113,11 +136,19 @@ export default function Navbar_AR() {
     setDrawerState(!drawerState);
   };
   // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  // }, []);
   useEffect(() => {
     handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
   return (
     <AppBar position="static" className={classes.navbar}>
@@ -143,38 +174,47 @@ export default function Navbar_AR() {
                   {
                     key: servicesMenu1Key,
                     text: servicesMenu1AR,
+                    url: printAndCopyMenu1Link,
                   },
                   {
                     key: servicesMenu2Key,
                     text: servicesMenu2AR,
+                    url: printAndCopyMenu2Link,
                   },
                   {
                     key: servicesMenu3Key,
                     text: servicesMenu3AR,
+                    url: printAndCopyMenu3Link,
                   },
                   {
                     key: servicesMenu4Key,
                     text: servicesMenu4AR,
+                    url: printAndCopyMenu4Link,
                   },
                   {
                     key: servicesMenu5Key,
                     text: servicesMenu5AR,
+                    url: printAndCopyMenu5Link,
                   },
                   {
                     key: servicesMenu6Key,
                     text: servicesMenu6AR,
+                    url: printAndCopyMenu6Link,
                   },
                   {
                     key: servicesMenu7Key,
                     text: servicesMenu7AR,
+                    url: printAndCopyMenu7Link,
                   },
                   {
                     key: servicesMenu8Key,
                     text: servicesMenu8AR,
+                    url: printAndCopyMenu7Link,
                   },
                   {
                     key: servicesMenu9Key,
                     text: servicesMenu9AR,
+                    url: printAndCopyMenu7Link,
                   },
                 ]}
               />
@@ -211,14 +251,17 @@ export default function Navbar_AR() {
                   {
                     key: softwareSolutionsMenu1Key,
                     text: softwareSolutionsMenu1AR,
+                    url: softwareSolutionsMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu2Key,
                     text: softwareSolutionsMenu2AR,
+                    url: softwareSolutionsMenu2Link,
                   },
                   {
                     key: softwareSolutionsMenu3Key,
                     text: softwareSolutionsMenu3AR,
+                    url: softwareSolutionsMenu3Link,
                   },
                 ]}
               />
@@ -230,13 +273,13 @@ export default function Navbar_AR() {
                 buttonText={printAndCopyTextAR}
                 popperPlacement="bottom-end"
                 menuItems={[
-                  { key: printAndCopyMenu1Key, text: printAndCopyMenu1AR },
-                  { key: printAndCopyMenu2Key, text: printAndCopyMenu2AR },
-                  { key: printAndCopyMenu3Key, text: printAndCopyMenu3AR },
-                  { key: printAndCopyMenu4Key, text: printAndCopyMenu4AR },
-                  { key: printAndCopyMenu5Key, text: printAndCopyMenu5AR },
-                  { key: printAndCopyMenu6Key, text: printAndCopyMenu6AR },
-                  { key: printAndCopyMenu7Key, text: printAndCopyMenu7AR },
+                  { key: printAndCopyMenu1Key, text: printAndCopyMenu1AR, url: printAndCopyMenu1Link, },
+                  { key: printAndCopyMenu2Key, text: printAndCopyMenu2AR, url: printAndCopyMenu2Link, },
+                  // { key: printAndCopyMenu3Key, text: printAndCopyMenu3AR, url: printAndCopyMenu3Link, },
+                  // { key: printAndCopyMenu4Key, text: printAndCopyMenu4AR, url: printAndCopyMenu4Link, },
+                  { key: printAndCopyMenu5Key, text: printAndCopyMenu5AR, url: printAndCopyMenu5Link, },
+                  { key: printAndCopyMenu6Key, text: printAndCopyMenu6AR, url: printAndCopyMenu6Link, },
+                  { key: printAndCopyMenu7Key, text: printAndCopyMenu7AR, url: printAndCopyMenu7Link, },
                 ]}
               />
             </div>
@@ -313,7 +356,7 @@ export default function Navbar_AR() {
               <Link>
                 <Typography
                   className={classes.brand}
-                  // style={{ background: 'blue' }}
+                // style={{ background: 'blue' }}
                 >
                   مؤسسة النور
                 </Typography>{' '}

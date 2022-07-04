@@ -70,7 +70,7 @@ import {
   printAndCopyMenu6Link,
   printAndCopyMenu5Link,
   printAndCopyMenu4Link,
-  printAndCopyMenu3Link,
+  printAndCopyMenu3Link, softwareSolutionsMenu1Link, softwareSolutionsMenu2Link, softwareSolutionsMenu3Link
 } from './Navbar_text';
 import PopupMenu_EN from '../PopupMenu/PopupMenu_EN';
 import NavigationDrawer_EN from '../NavigationDrawer/NavigationDrawer_EN';
@@ -104,20 +104,40 @@ export default function Navbar_EN() {
   }
 
   const handleResize = () => {
+    // console.log('home page size');
     // console.log(window.innerWidth);
-    if (window.innerWidth < 960) {
-      setLargeView(false);
-    } else {
-      setLargeView(true);
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      // function handleResize() {
+      // Set window width/height to state
+      if (window.innerWidth < 960) {
+        setLargeView(false);
+      } else {
+        setLargeView(true);
+      }
+      // setWindowSize({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight,
+      // });
     }
+    // console.log(windowSize);
   };
 
   // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+  // });
+  // useEffect(() => {
+  //   handleResize();
+  //   // window.addEventListener('resize', handleResize);
+  // }, [window]);
+  // useEffect(() => {
+  //   handleResize();
+  //   // return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   useEffect(() => {
     handleResize();
+    window.addEventListener('resize', handleResize);
   }, []);
   return (
     <AppBar position="static" className={classes.navbar}>
@@ -140,7 +160,7 @@ export default function Navbar_EN() {
               <Link>
                 <Typography
                   className={classes.brand}
-                  // style={{ background: 'blue' }}
+                // style={{ background: 'blue' }}
                 >
                   AL-Nour
                 </Typography>{' '}
@@ -214,16 +234,16 @@ export default function Navbar_EN() {
                     text: printAndCopyMenu2EN,
                     url: printAndCopyMenu2Link,
                   },
-                  {
-                    key: printAndCopyMenu3Key,
-                    text: printAndCopyMenu3EN,
-                    url: printAndCopyMenu3Link,
-                  },
-                  {
-                    key: printAndCopyMenu4Key,
-                    text: printAndCopyMenu4EN,
-                    url: printAndCopyMenu4Link,
-                  },
+                  // {
+                  //   key: printAndCopyMenu3Key,
+                  //   text: printAndCopyMenu3EN,
+                  //   url: printAndCopyMenu3Link,
+                  // },
+                  // {
+                  //   key: printAndCopyMenu4Key,
+                  //   text: printAndCopyMenu4EN,
+                  //   url: printAndCopyMenu4Link,
+                  // },
                   {
                     key: printAndCopyMenu5Key,
                     text: printAndCopyMenu5EN,
@@ -252,14 +272,17 @@ export default function Navbar_EN() {
                   {
                     key: softwareSolutionsMenu1Key,
                     text: softwareSolutionsMenu1EN,
+                    url: softwareSolutionsMenu1Link,
                   },
                   {
                     key: softwareSolutionsMenu2Key,
                     text: softwareSolutionsMenu2EN,
+                    url: softwareSolutionsMenu2Link,
                   },
                   {
                     key: softwareSolutionsMenu3Key,
                     text: softwareSolutionsMenu3EN,
+                    url: softwareSolutionsMenu3Link,
                   },
                 ]}
               />
@@ -296,6 +319,7 @@ export default function Navbar_EN() {
                   {
                     key: servicesMenu1Key,
                     text: servicesMenu1EN,
+                    // url: printAndCopyMenu1Link,
                   },
                   {
                     key: servicesMenu2Key,

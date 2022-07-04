@@ -1,4 +1,9 @@
-const { analysisAdviceRoute } = require('../../src/routes');
+const {
+  analysisAdviceRoute,
+  officeSolutionsRoute,
+  softwareSolutionsRoute,
+  technicalSupportRoute, infoPrintCopyRoute, documentManagementRoute, fleetManagementRoute, assetManagementRoute
+} = require('../../src/routes');
 
 const printAndCopyTextEN = 'Print & Copy';
 const printAndCopyTextAR = 'الطباعة و الطباعة التصويرية';
@@ -9,7 +14,7 @@ const printAndCopyMenu1Link = analysisAdviceRoute;
 const printAndCopyMenu1Key = 'infra_analysis';
 const printAndCopyMenu2EN = 'Office Solutions';
 const printAndCopyMenu2AR = 'مستلزمات المكتب طابعات';
-const printAndCopyMenu2Link = analysisAdviceRoute;
+const printAndCopyMenu2Link = officeSolutionsRoute;
 const printAndCopyMenu2Key = 'office_solutions';
 const printAndCopyMenu3EN = 'Production Pressure';
 const printAndCopyMenu3AR = 'طابعات الأنتاج العالي';
@@ -20,16 +25,16 @@ const printAndCopyMenu4AR = 'طباعة خرائط';
 const printAndCopyMenu4Link = analysisAdviceRoute;
 const printAndCopyMenu4Key = 'large_format';
 const printAndCopyMenu5EN = 'Software solutions';
-const printAndCopyMenu5Link = analysisAdviceRoute;
+const printAndCopyMenu5Link = softwareSolutionsRoute;
 const printAndCopyMenu5AR = 'برامج ادارة الطباعة';
 const printAndCopyMenu5Key = 'software_solutions';
 const printAndCopyMenu6EN = 'Technology and Support';
 const printAndCopyMenu6AR = 'الدعم الفني';
-const printAndCopyMenu6Link = analysisAdviceRoute;
+const printAndCopyMenu6Link = technicalSupportRoute;
 const printAndCopyMenu6Key = 'tech_support';
 const printAndCopyMenu7EN = 'Useful Information';
 const printAndCopyMenu7AR = 'معلومات تهمك';
-const printAndCopyMenu7Link = analysisAdviceRoute;
+const printAndCopyMenu7Link = infoPrintCopyRoute;
 const printAndCopyMenu7Key = 'useful_information';
 
 const softwareSolutionsTextEN = 'Software solutions';
@@ -37,12 +42,15 @@ const softwareSolutionsTextAR = 'برامج الأدارة';
 const softwareSolutionsMenu1EN = 'Document management';
 const softwareSolutionsMenu1AR = 'برامج أدارة الطابعات والمستخدمين';
 const softwareSolutionsMenu1Key = 'document_management';
+const softwareSolutionsMenu1Link = documentManagementRoute;
 const softwareSolutionsMenu2EN = 'Fleet management';
 const softwareSolutionsMenu2AR = 'برامج أدارة الأجهزة';
 const softwareSolutionsMenu2Key = 'fleet_management';
+const softwareSolutionsMenu2Link = fleetManagementRoute;
 const softwareSolutionsMenu3EN = 'Asset tracking & management';
 const softwareSolutionsMenu3AR = 'برامج أدارة الأصول و متابعة الأستهلاك';
 const softwareSolutionsMenu3Key = 'asset_management';
+const softwareSolutionsMenu3Link = assetManagementRoute;
 
 const officeEquipmentTextEN = 'Office equipment';
 const officeEquipmentTextAR = 'مستلزمات المكاتب من الأثاث';
@@ -122,12 +130,15 @@ module.exports = {
   softwareSolutionsMenu1EN,
   softwareSolutionsMenu1AR,
   softwareSolutionsMenu1Key,
+  softwareSolutionsMenu1Link,
   softwareSolutionsMenu2EN,
   softwareSolutionsMenu2AR,
   softwareSolutionsMenu2Key,
+  softwareSolutionsMenu2Link,
   softwareSolutionsMenu3EN,
   softwareSolutionsMenu3AR,
   softwareSolutionsMenu3Key,
+  softwareSolutionsMenu3Link,
 
   officeEquipmentTextEN,
   officeEquipmentTextAR,

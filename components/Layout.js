@@ -29,6 +29,9 @@ export default function Layout({ children, title, description }) {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const { darkMode, cart, userInfo, requestInfo, language } = state;
+  // const { state, dispatch } = useContext(Store);
+  // const { language } = state;
+
   const theme = createTheme({
     typography: {
       h1: {
@@ -86,18 +89,26 @@ export default function Layout({ children, title, description }) {
       <Head>
         <title>
           {title
-            ? `${title} | AL-Nour Association`
-            : 'AL-Nour Store Association'}
+            ? `${title} | ${language === 'EN' ? 'AL-Nour Association' : 'مؤسسة النور'}`
+            : `${language === 'EN' ? 'AL-Nour Association' : 'مؤسسة النور'}`}
         </title>
-        {description && <meta name="description" content={description}></meta>}
+        {title && <meta name='title' content={title} ></meta>}
+        <meta name="robots" content="all" />
+        {description && <meta name="description" content={description} key='desc'></meta>}
+        <meta property="og:title" content={title || 'Al-Nour Association for office supplies'}></meta>
+        {description && <meta
+          property="og:description"
+          // Your competent partner for all your office requirement. Printers, copiers, Multifunction devices, software solutions, technical support, maintenace.
+          content={description}
+        />}
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <AnouncementBar />
         <Divider />
         <Navbar />
-
-        <Container className={classes.main}>{children}</Container>
+        {/* <div className={}></div> */}
+        <div className={classes.main}>{children}</div>
         <footer className={classes.footer}>
           <Footer />
           {/* <Typography>All Rights Reserved.</Typography> */}
