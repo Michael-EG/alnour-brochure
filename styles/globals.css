@@ -99,6 +99,7 @@ a {
   height: 10vh;
   min-height: 100px;
   max-height: 200px;
+  background-color: white !important;
 }
 .navbar-mainDiv-mobile-ar {
   /* position: relative; */
