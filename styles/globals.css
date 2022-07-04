@@ -1141,6 +1141,16 @@ a {
   padding-right: 5vw;
 
 }
+.grid-links-main-grid-ar {
+  width: 100vw !important;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex !important;
+  /* flex-direction: column !important; */
+  /* flex: 1 !important; */
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
 
 .grid-links-child-grid {
   width: 100% !important;

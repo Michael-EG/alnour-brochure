@@ -123,6 +123,10 @@ export default function Home_EN() {
   const linkTitle2 = 'Printers & Copiers';
   const linkDescription2 = 'Know more about available systems. And find out which devices best suit your office requirements.';
   const linkButtonText2 = 'View'
+  // const linkTitle2 = 'Software solutions';
+  const linkTitle3 = 'Software solutions';
+  const linkDescription3 = 'Document management, Fleet management, Asset management & tracking.';
+  const linkButtonText3 = 'View'
   const handleResize = () => {
     // console.log(window.innerWidth);
     if (window.innerWidth < 960) {
@@ -169,12 +173,22 @@ export default function Home_EN() {
           articleParagraphs={officePrintersParagraphs2}
         />
       </div>
-      <div style={{ width: '100%', marginTop: '12vh', marginBottom: '0', marginLeft: '10%', marginRight: '10%' }}>
-        <Divider />
+      <div style={{ width: '100%', marginTop: '6vh', marginBottom: '6vh', marginLeft: '10%', marginRight: '10%' }}>
+        {/* <Divider /> */}
       </div>
       <LinkComponent_EN
+        // imageURL={imageURL}
+        // imageAltText={imageAltText}
+        title={linkTitle3}
+        description={linkDescription3}
+        sectionBackgroundColor={light_beige}
+        buttonText={linkButtonText3}
+        buttonColor={grey_1}
+        buttonTextColor={paper_1_color}
+      />
+      <LinkComponent_EN
         // imageURL={imageURL2}
-        imageAltText={imageAltText2}
+        // imageAltText={imageAltText2}
         title={linkTitle2}
         description={linkDescription2}
         // sectionBackgroundColor={light_beige}
@@ -186,6 +200,7 @@ export default function Home_EN() {
         descriptionColor={paper_1_color}
         cardColor={dark_grey}
       />
+
       <div style={{ width: '100%', marginTop: '12vh', marginBottom: '0', marginLeft: '10%', marginRight: '10%' }}>
         <Divider />
       </div>

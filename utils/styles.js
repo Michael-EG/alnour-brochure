@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     flex: '1',
     justifyContent: 'center',
     // alignItems: 'center',
-    width: '100vw',
+    width: '100%',
     // background: 'red'
     // maxWidth: '1024px'
     // backgroundColor: 'red',

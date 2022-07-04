@@ -10,7 +10,7 @@ export default function GridLinks_AR({ gridTitle, gridComponents, gridItemBackgr
       <div className='gird-links-section-title-div'>
         <Typography className='grid-links-section-title-text' style={{ color: gridTitleColor || 'black' }}>{gridTitle}</Typography>
       </div>
-      <Grid className='grid-links-main-grid' columns={{ xs: 1, md: 3 }} container spacing={{ xs: 3, md: 4 }}>
+      <Grid className='grid-links-main-grid-ar' columns={{ xs: 1, md: 3 }} container spacing={{ xs: 3, md: 4 }}>
         {gridComponents.map((item, index) => {
           return (
             <Grid item xs={12} md={4} key={uuidv4()} className='grid-links-child-grid-ar' >
