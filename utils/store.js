@@ -51,11 +51,13 @@ function reducer(state, action) {
       };
 
     case 'SET_ENGLISH':
+      // Cookies.set('language', 'EN');
       return {
         ...state,
         language: 'EN',
       };
     case 'SET_ARABIC':
+      // Cookies.set('language', 'AR');
       return {
         ...state,
         language: 'AR',
@@ -68,8 +70,8 @@ function reducer(state, action) {
       );
       const cartItems = existItem
         ? state.cart.cartItems.map((item) =>
-            item._id === existItem._id ? newItem : item
-          )
+          item._id === existItem._id ? newItem : item
+        )
         : [...state.cart.cartItems, newItem];
       Cookies.set('cartItems', JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
