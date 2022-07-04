@@ -68,7 +68,7 @@ export default function Article2_AR({
         <div className={largeView ? "article2-main-div" : "article2-main-div-mobile"}>
           <div className={largeView ? "article2-article-title-div-ar" : "article2-article-title-div-mobile-ar"}>
             {articleTitle && (
-              <Typography className={largeView ? "article2-article-title-text-ar" : "article2-article-title-text-mobile-ar"} style={{ color: titleColor || '#404040' }}>
+              <Typography className={largeView ? "article2-article-title-text-ar" : "article2-article-title-text-mobile-ar"} style={{ color: titleColor || '#404040' }} component='h1' variant='h1'>
                 {articleTitle}
               </Typography>
             )}

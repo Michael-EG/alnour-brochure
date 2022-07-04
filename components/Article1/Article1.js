@@ -17,7 +17,7 @@ export default function Article1({
         <div className="article1-main-div">
           <div className="article1-article-title-div">
             {articleTitle && (
-              <Typography className="article1-article-title-text-inner">
+              <Typography className="article1-article-title-text-inner" component='h1' variant='h1'>
                 {articleTitle}
               </Typography>
             )}

@@ -87,9 +87,17 @@ export default function Layout({ children, title, description }) {
         <title>
           {title
             ? `${title} | AL-Nour Association`
-            : 'AL-Nour Store Association'}
+            : 'AL-Nour Association'}
         </title>
-        {description && <meta name="description" content={description}></meta>}
+        {title && <meta name='title' content={title} ></meta>}
+        <meta name="robots" content="all" />
+        {description && <meta name="description" content={description} key='desc'></meta>}
+        <meta property="og:title" content={title || 'Al-Nour Association for office supplies'}></meta>
+        {description && <meta
+          property="og:description"
+          // Your competent partner for all your office requirement. Printers, copiers, Multifunction devices, software solutions, technical support, maintenace.
+          content={description}
+        />}
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
