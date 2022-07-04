@@ -6,7 +6,7 @@ import InfoPrintCopy_EN from '../pages_layout/InfoPrintCopy/InfoPrintCopy_EN';
 // import TechnicalSupport_EN from '../pages_layout/TechnicalSupport/TechnicalSupport_EN';
 import { Store } from '../utils/store';
 
-export default function infoPrintCopy() {
+export default function InfoPrintCopy() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);

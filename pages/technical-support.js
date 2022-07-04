@@ -4,7 +4,7 @@ import TechnicalSupport_AR from '../pages_layout/TechnicalSupport/TechnicalSuppo
 import TechnicalSupport_EN from '../pages_layout/TechnicalSupport/TechnicalSupport_EN';
 import { Store } from '../utils/store';
 
-export default function technicalSupport() {
+export default function TechnicalSupport() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);

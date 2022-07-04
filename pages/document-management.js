@@ -8,7 +8,7 @@ import DocumentManagement_EN from '../pages_layout/DocumentManagement/DocumentMa
 // import TechnicalSupport_EN from '../pages_layout/TechnicalSupport/TechnicalSupport_EN';
 import { Store } from '../utils/store';
 
-export default function documentManagement() {
+export default function DocumentManagement() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);
