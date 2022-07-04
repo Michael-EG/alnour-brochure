@@ -25,7 +25,7 @@ import Home_EN from '../pages_layout/Home/Home_EN';
 // import TechnicalSupport_EN from '../pages_layout/TechnicalSupport/TechnicalSupport_EN';
 import { Store } from '../utils/store';
 
-export default function documentManagement() {
+export default function Home() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);
