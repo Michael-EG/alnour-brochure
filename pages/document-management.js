@@ -12,8 +12,12 @@ export default function documentManagement() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);
+  const documentManagementTitle_EN = 'Document management';
+  const documentManagementTitle_AR = 'إدارة الوثائق';
+  const documentManagementDescription_EN = 'Al-Nour Association will help you with all questions about the different document solution softwares. You can expect competent advice, as well as support and integration of the software in your company. Of course, our competent support team is at your disposal throughout the entire term.';
+  const documentManagementDescription_AR = 'سوف تساعدك مؤسسة النور في جميع الأسئلة المتعلقة ببرامج حلول المستندات المختلفة. يمكنك توقع مشورة مختصة ، بالإضافة إلى دعم وتكامل البرنامج في شركتك. بالطبع ، فريق الدعم المختص لدينا تحت تصرفك طوال المدة بأكملها';
   return (
-    <Layout>
+    <Layout title={language === 'EN' ? documentManagementTitle_EN : documentManagementTitle_AR} description={language === 'EN' ? documentManagementDescription_EN : documentManagementDescription_AR}>
       {/* <div>English analysis advice</div> */}
       {language === 'EN' && <DocumentManagement_EN />}
       {/* {language === 'EN' && <div>English is decided</div>} */}

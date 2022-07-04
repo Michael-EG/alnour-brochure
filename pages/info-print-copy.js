@@ -10,8 +10,13 @@ export default function infoPrintCopy() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);
+  const infoPrintCopyTitle_EN = 'Print & Copy useful information';
+  const infoPrintCopyTitle_AR = 'معلومات مفيدة للطباعة والنسخ';
+  const infoPrintCopyDescription_EN = 'This significantly reduces your energy costs and makes an important contribution to environmental protection.';
+  const infoPrintCopyDescription_AR = 'يقلل بشكل كبير من تكاليف الطاقة الخاصة بك ويساهم بشكل كبير في حماية البيئة';
+
   return (
-    <Layout>
+    <Layout title={language === 'EN' ? infoPrintCopyTitle_EN : infoPrintCopyTitle_AR} description={language === 'EN' ? infoPrintCopyDescription_EN : infoPrintCopyDescription_AR}>
       {/* <div>English analysis advice</div> */}
       {language === 'EN' && <InfoPrintCopy_EN />}
       {/* {language === 'EN' && <div>English is decided</div>} */}

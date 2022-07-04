@@ -29,8 +29,13 @@ export default function documentManagement() {
   const { state, dispatch } = useContext(Store);
   const { language } = state;
   // console.log(language);
+  const homeDescription_AR = 'شريكك المختص لادارة و توفير جميع أجهزة الطباعة و مستلزماتها من برامج أدارة المستخدمين و الأصول , و توفير الأحبار , و قطع الغيار متخصصون في مؤسسة النور التجارية في توفير جميع أحتياجات المكاتب من أوراق الطباعة ومستلزمات المكاتب نبحث مع شركائنا علي توفير حلول فريدة لتوفير الوقت و التكاليف نعمل معا من أجل بيئة عمل أفضل';
+  const homeDescription_EN = 'Al-Nour Association is your competent partner with individual solutions for all areas of office organization. We create transparency, implement efficient processes together with you and reduce costs. This is what we stand for - together with our strong partners.';
+  const homeTitle_AR = 'الرئيسية';
+  const homeTitle_EN = 'Home';
+
   return (
-    <Layout>
+    <Layout title={language === 'EN' ? homeTitle_EN : homeTitle_AR} description={language === 'EN' ? homeDescription_EN : homeDescription_AR}>
       {/* <div>English analysis advice</div> */}
       {language === 'EN' && <Home_EN />}
       {/* {language === 'EN' && <div>English is decided</div>} */}
