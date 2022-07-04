@@ -9,6 +9,7 @@ import Dns from '@mui/icons-material/Dns';
 import Public from '@mui/icons-material/Public';
 import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import {
   ListItemIcon,
   ListItemText,
@@ -34,12 +35,19 @@ import {
   officeEquipmentTextAR,
   officeSuppliesTextAR,
   printAndCopyMenu1AR,
+  printAndCopyMenu1Link,
   printAndCopyMenu2AR,
+  printAndCopyMenu2Link,
   printAndCopyMenu3AR,
+  printAndCopyMenu3Link,
   printAndCopyMenu4AR,
+  printAndCopyMenu4Link,
   printAndCopyMenu5AR,
+  printAndCopyMenu5Link,
   printAndCopyMenu6AR,
+  printAndCopyMenu6Link,
   printAndCopyMenu7AR,
+  printAndCopyMenu7Link,
   printAndCopyTextAR,
   servicesMenu1AR,
   servicesMenu2AR,
@@ -52,23 +60,26 @@ import {
   servicesMenu9AR,
   servicesTextAR,
   softwareSolutionsMenu1AR,
+  softwareSolutionsMenu1Link,
   softwareSolutionsMenu2AR,
+  softwareSolutionsMenu2Link,
   softwareSolutionsMenu3AR,
+  softwareSolutionsMenu3Link,
   softwareSolutionsTextAR,
 } from '../Navbar/Navbar_text';
 const printAndCopyData = [
-  { icon: <People />, label: printAndCopyMenu1AR },
-  { icon: <Dns />, label: printAndCopyMenu2AR },
-  { icon: <PermMedia />, label: printAndCopyMenu3AR },
-  { icon: <Public />, label: printAndCopyMenu4AR },
-  { icon: <Public />, label: printAndCopyMenu5AR },
-  { icon: <Public />, label: printAndCopyMenu6AR },
-  { icon: <Public />, label: printAndCopyMenu7AR },
+  { icon: <People />, label: printAndCopyMenu1AR, url: printAndCopyMenu1Link },
+  { icon: <Dns />, label: printAndCopyMenu2AR, url: printAndCopyMenu2Link },
+  { icon: <PermMedia />, label: printAndCopyMenu3AR, url: printAndCopyMenu3Link },
+  { icon: <Public />, label: printAndCopyMenu4AR, url: printAndCopyMenu4Link },
+  { icon: <Public />, label: printAndCopyMenu5AR, url: printAndCopyMenu5Link },
+  { icon: <Public />, label: printAndCopyMenu6AR, url: printAndCopyMenu6Link },
+  { icon: <Public />, label: printAndCopyMenu7AR, url: printAndCopyMenu7Link },
 ];
 const softwareSolutionsDate = [
-  { icon: <People />, label: softwareSolutionsMenu1AR },
-  { icon: <Dns />, label: softwareSolutionsMenu2AR },
-  { icon: <PermMedia />, label: softwareSolutionsMenu3AR },
+  { icon: <People />, label: softwareSolutionsMenu1AR, url: softwareSolutionsMenu1Link },
+  { icon: <Dns />, label: softwareSolutionsMenu2AR, url: softwareSolutionsMenu2Link },
+  { icon: <PermMedia />, label: softwareSolutionsMenu3AR, url: softwareSolutionsMenu3Link },
   // { icon: <Public />, label: printAndCopyMenu4EN },
   // { icon: <Public />, label: printAndCopyMenu5EN },
   // { icon: <Public />, label: printAndCopyMenu6EN },
@@ -106,6 +117,7 @@ export default function NavigationDrawer_AR() {
   const [softwareSolutionsOpen, setSoftwareSolutionsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [drawerState, setDrawerState] = useState(false);
+  const router = useRouter();
   const toggleDrawer = (open) => (event) => {
     if (
       event &&
@@ -169,7 +181,7 @@ export default function NavigationDrawer_AR() {
                   alt="logo -small"
                   width={75}
                   height={75}
-                  //   layout="fill"
+                //   layout="fill"
                 />
               </ListItemButton>
               <Divider />
@@ -256,6 +268,12 @@ export default function NavigationDrawer_AR() {
                         minHeight: 32,
                         color: { dark_grey },
                       }}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        if (item.url) {
+                          router.push(item.url);
+                        }
+                      }}
                     >
                       <ListItemText
                         primary={item.label}
@@ -335,6 +353,12 @@ export default function NavigationDrawer_AR() {
                         py: 0,
                         minHeight: 32,
                         color: { dark_grey },
+                      }}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        if (item.url) {
+                          router.push(item.url);
+                        }
                       }}
                     >
                       <ListItemText
@@ -450,6 +474,12 @@ export default function NavigationDrawer_AR() {
                         py: 0,
                         minHeight: 32,
                         color: { dark_grey },
+                      }}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        if (item.url) {
+                          router.push(item.url);
+                        }
                       }}
                     >
                       <ListItemText
