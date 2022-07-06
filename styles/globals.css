@@ -78,6 +78,7 @@ a {
   height: 10vh;
   min-height: 100px;
   max-height: 200px;
+  background-color: white !important;
   /* background-color: yellow; */
 }
 .navbar-mainDiv-mobile {
@@ -89,6 +90,7 @@ a {
   height: 10vh;
   min-height: 100px;
   max-height: 200px;
+  background-color: white !important;
 }
 .navbar-mainDiv-ar {
   /* position: relative; */
@@ -110,6 +112,7 @@ a {
   height: 10vh;
   min-height: 100px;
   max-height: 200px;
+  background-color: white !important;
 }
 
 .navbar-logo-area {
