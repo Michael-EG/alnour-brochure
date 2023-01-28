@@ -68,10 +68,29 @@ export default function Article2_EN({
         // style={{ width: '100%', height: 'fit-content' }}
         className="article2-main-paper"
       >
-        <div className={largeView ? "article2-main-div" : "article2-main-div-mobile"}>
-          <div className={largeView ? "article2-article-title-div" : "article2-article-title-div-mobile"}>
+        <div
+          className={
+            largeView ? 'article2-main-div' : 'article2-main-div-mobile'
+          }
+        >
+          <div
+            className={
+              largeView
+                ? 'article2-article-title-div'
+                : 'article2-article-title-div-mobile'
+            }
+          >
             {articleTitle && (
-              <Typography className={largeView ? "article2-article-title-text" : "article2-article-title-text-mobile"} style={{ color: titleColor || '#404040' }} component='h1' variant='h1'>
+              <Typography
+                className={
+                  largeView
+                    ? 'article2-article-title-text'
+                    : 'article2-article-title-text-mobile'
+                }
+                style={{ color: titleColor || '#404040' }}
+                component="h1"
+                variant="h1"
+              >
                 {articleTitle}
               </Typography>
             )}
@@ -79,19 +98,45 @@ export default function Article2_EN({
           <div
             className={
               articleImage
-                ? largeView ? 'article2-article-body-div-with-image' : 'article2-article-body-div-with-image-mobile'
-                : largeView ? 'article2-article-body-div-without-image' : 'article2-article-body-div-without-image-mobile'
+                ? largeView
+                  ? 'article2-article-body-div-with-image'
+                  : 'article2-article-body-div-with-image-mobile'
+                : largeView
+                ? 'article2-article-body-div-without-image'
+                : 'article2-article-body-div-without-image-mobile'
             }
           >
             {articleImage && articleImageAltText && (
-              <div className={largeView ? "article2-article-image-div" : "article2-article-image-div-mobile"}>
-                <Image src={articleImage} alt={articleImageAltText} className={largeView ? 'article2-article-image' : 'article2-article-image-mobile'} layout={largeView ? "responsive" : "responsive"} height={largeView ? '25vw' : 200} width={largeView ? '25vw' : 200} />
+              <div
+                className={
+                  largeView
+                    ? 'article2-article-image-div'
+                    : 'article2-article-image-div-mobile'
+                }
+              >
+                <Image
+                  src={articleImage}
+                  alt={articleImageAltText}
+                  className={
+                    largeView
+                      ? 'article2-article-image'
+                      : 'article2-article-image-mobile'
+                  }
+                  layout="responsive"
+                  // width={10}
+                  // height={10}
+                  // layout={largeView ? 'responsive' : 'responsive'}
+                  height={largeView ? '25vh' : 100}
+                  width={largeView ? '25vw' : 100}
+                />
               </div>
             )}
             <div
               className={
                 articleImage
-                  ? largeView ? 'article2-article-paragraphs-div-with-image' : 'article2-article-paragraphs-div-with-image-mobile'
+                  ? largeView
+                    ? 'article2-article-paragraphs-div-with-image'
+                    : 'article2-article-paragraphs-div-with-image-mobile'
                   : 'article2-article-paragraphs-div-without-image'
               }
             >
@@ -99,13 +144,35 @@ export default function Article2_EN({
                 if (paragraph.isBullet) {
                   // return a bullet list
                   return (
-                    <div key={uuidv4()} className="article2-article-paragraph-div">
-                      <Typography className="article2-article-bullet-list-heading" style={{ color: bulletListHeadingColor || '#476282' }} >
+                    <div
+                      key={uuidv4()}
+                      className="article2-article-paragraph-div"
+                    >
+                      <Typography
+                        className="article2-article-bullet-list-heading"
+                        style={{ color: bulletListHeadingColor || '#476282' }}
+                      >
                         {paragraph.listTitle}
                       </Typography>
-                      <ul style={{ color: bulletItemsColor || bodyTextColor || '#000000' }}>
+                      <ul
+                        style={{
+                          color: bulletItemsColor || bodyTextColor || '#000000',
+                        }}
+                      >
                         {paragraph.listItems.map((listItem) => (
-                          <li key={uuidv4()}><Typography className="article2-article-body-text" style={{ color: bulletItemsColor || bodyTextColor || '#000000' }}>{listItem}</Typography></li>
+                          <li key={uuidv4()}>
+                            <Typography
+                              className="article2-article-body-text"
+                              style={{
+                                color:
+                                  bulletItemsColor ||
+                                  bodyTextColor ||
+                                  '#000000',
+                              }}
+                            >
+                              {listItem}
+                            </Typography>
+                          </li>
                         ))}
                       </ul>
                       {index !== articleParagraphs.length - 1 && (
@@ -120,19 +187,23 @@ export default function Article2_EN({
                       className="article2-article-paragraph-div"
                     >
                       {paragraph.heading && (
-                        <Typography className="article2-article-paragraph-heading-text" style={{ color: paragraphHeadingColor || '#476282' }}>
+                        <Typography
+                          className="article2-article-paragraph-heading-text"
+                          style={{ color: paragraphHeadingColor || '#476282' }}
+                        >
                           {paragraph.heading}
                         </Typography>
                       )}
                       {paragraph.heading && <br />}
-                      <Typography className="article2-article-body-text" style={{ color: bodyTextColor || '#000000' }}>
+                      <Typography
+                        className="article2-article-body-text"
+                        style={{ color: bodyTextColor || '#000000' }}
+                      >
                         {paragraph.text}
                       </Typography>
-                      {
-                        index !== articleParagraphs.length - 1 && (
-                          <Divider className="article1-article-body-divider" />
-                        )
-                      }
+                      {index !== articleParagraphs.length - 1 && (
+                        <Divider className="article1-article-body-divider" />
+                      )}
                     </div>
                   );
                 }
@@ -141,6 +212,6 @@ export default function Article2_EN({
           </div>
         </div>
       </Paper>
-    </Box >
+    </Box>
   );
 }

@@ -907,6 +907,7 @@ a {
   border-radius: 2vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  /* max-height: 25% !important; */
   /* max-width: 2rem !important; */
   /* max-height: 25% !important;
   max-width: 25vw !important; */
@@ -917,6 +918,7 @@ a {
   border-radius: 1rem;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  /* max-height: 25% !important; */
   /* max-width: 2rem !important; */
   /* max-height: 25% !important;
   max-width: 25vw !important; */
